@@ -1,28 +1,16 @@
 package Monsters;
 
 /**
- * Project: Lab 2
- * Purpose Details: Monster special powers enum
- * Course: IST 242
- * Author:
- * Date Developed:
- * Last Date Changed:
- * Rev:
+ * File: SpecialPower.java
+ * Name: Luka Nikabadze
+ * Course: IST 242, Section 001: Inter Oo App Dev
+ * Assignment: Solo Lab 2
  */
 public enum SpecialPower {
-
-    /** Heals over time */
-    REGENERATION,
-
-    /** Attacks with poison */
-    POISON,
-
-    /** Freezes enemies */
-    ICE_BLAST,
-
-    /** Attacks with lightning */
-    LIGHTNING,
-
-    /** Turns invisible */
-    INVISIBILITY
+    POISON_HEADS,
+    LABYRINTH_CHARGE,
+    STEEL_SHIELD,
+    RAGE_ROAR,
+    LASER_BEAM
 }
+
