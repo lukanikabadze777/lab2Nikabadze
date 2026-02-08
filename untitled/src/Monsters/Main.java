@@ -3,17 +3,24 @@ package Monsters;
 /**
  * File: Main.java
  * Name: Luka Nikabadze
- * Course: IST 242, Section 001: Inter Oo App Dev
+ * Course: IST 242, Section 001: Inter OO App Dev
  * Assignment: Solo Lab 2
  *
  * Description:
- * This program creates 5 monsters using only 3 monster types.
- * It sets unique special powers, prints all monster details,
- * and demonstrates polymorphism using overridden methods.
+ * Main driver class that creates and prints 5 monsters.
+ * Demonstrates:
+ * - Abstraction (Monster class)
+ * - Inheritance (Hydra, Minotaur, MechaBeast)
+ * - Polymorphism (specialPowers method)
+ * - Enumeration (SpecialPower)
  */
 public class Main {
 
-    // Helper method to print monster details using getters
+    /**
+     * Prints one monster's full details using getters.
+     *
+     * @param m monster object
+     */
     private static void printMonster(Monster m) {
         System.out.println("----- Monster -----");
         System.out.println("Name: " + m.getName());
@@ -39,9 +46,14 @@ public class Main {
         System.out.println();
     }
 
+    /**
+     * Program entry point.
+     *
+     * @param args command line arguments
+     */
     public static void main(String[] args) {
 
-        // Create 5 monsters (only 3 types)
+        // Create 5 monsters, only 3 types
         Monster m1 = new Hydra("Swamp Hydra", 5, 200, 45, 30, 6);
         Monster m2 = new Hydra("Ancient Hydra", 7, 260, 55, 35, 9);
 
@@ -50,7 +62,7 @@ public class Main {
 
         Monster m5 = new MechaBeast("Steel Howl", 7, 240, 58, 45, 92);
 
-        // Set special powers using setters (NO repeats)
+        // Set powers using setters (NO repeats)
         m1.setSpecialPower(SpecialPower.POISON_HEADS);
         m2.setSpecialPower(SpecialPower.RAGE_ROAR);
         m3.setSpecialPower(SpecialPower.LABYRINTH_CHARGE);

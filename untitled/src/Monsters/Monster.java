@@ -3,20 +3,43 @@ package Monsters;
 /**
  * File: Monster.java
  * Name: Luka Nikabadze
- * Course: IST 242, Section 001: Inter Oo App Dev
+ * Course: IST 242, Section 001: Inter OO App Dev
  * Assignment: Solo Lab 2
+ *
+ * Description:
+ * Abstract sealed parent class that represents a Monster.
+ * This class demonstrates abstraction and supports polymorphism through
+ * the specialPowers() method which is implemented in child classes.
  */
 public abstract sealed class Monster permits Hydra, Minotaur, MechaBeast {
 
+    /** Monster name */
     private String name;
-    private String category;   // Mythic or Sci-Fi
-    private String type;       // Hydra / Minotaur / MechaBeast
+
+    /** Monster category (example: Mythic or Sci-Fi) */
+    private String category;
+
+    /** Monster type/species (example: Hydra, Minotaur, MechaBeast) */
+    private String type;
+
+    /** Monster level */
     private int level;
+
+    /** Monster health points */
     private int health;
+
+    /** Monster attack stat */
     private int attack;
+
+    /** Monster defense stat */
     private int defense;
+
+    /** Monster special power */
     private SpecialPower specialPower;
 
+    /**
+     * Default constructor that sets basic default values.
+     */
     public Monster() {
         this.name = "Unknown";
         this.category = "Unknown";
@@ -28,6 +51,17 @@ public abstract sealed class Monster permits Hydra, Minotaur, MechaBeast {
         this.specialPower = SpecialPower.LASER_BEAM;
     }
 
+    /**
+     * Constructs a Monster using the provided values.
+     *
+     * @param name monster name
+     * @param category monster category
+     * @param type monster type/species
+     * @param level monster level
+     * @param health monster health
+     * @param attack monster attack
+     * @param defense monster defense
+     */
     public Monster(String name, String category, String type, int level, int health, int attack, int defense) {
         this.name = name;
         this.category = category;
@@ -39,30 +73,153 @@ public abstract sealed class Monster permits Hydra, Minotaur, MechaBeast {
         this.specialPower = SpecialPower.LASER_BEAM;
     }
 
-    // Polymorphism: each child implements this
+    /**
+     * Prints the monster's special power.
+     * Child classes implement this method (polymorphism).
+     */
     public abstract void specialPowers();
 
-    public String getName() { return name; }
-    public void setName(String name) { this.name = name; }
+    /**
+     * Returns the monster name.
+     *
+     * @return monster name
+     */
+    public String getName() {
+        return name;
+    }
 
-    public String getCategory() { return category; }
-    public void setCategory(String category) { this.category = category; }
+    /**
+     * Sets the monster name.
+     *
+     * @param name monster name
+     */
+    public void setName(String name) {
+        this.name = name;
+    }
 
-    public String getType() { return type; }
-    public void setType(String type) { this.type = type; }
+    /**
+     * Returns the monster category.
+     *
+     * @return category
+     */
+    public String getCategory() {
+        return category;
+    }
 
-    public int getLevel() { return level; }
-    public void setLevel(int level) { this.level = level; }
+    /**
+     * Sets the monster category.
+     *
+     * @param category category
+     */
+    public void setCategory(String category) {
+        this.category = category;
+    }
 
-    public int getHealth() { return health; }
-    public void setHealth(int health) { this.health = health; }
+    /**
+     * Returns the monster type/species.
+     *
+     * @return type/species
+     */
+    public String getType() {
+        return type;
+    }
 
-    public int getAttack() { return attack; }
-    public void setAttack(int attack) { this.attack = attack; }
+    /**
+     * Sets the monster type/species.
+     *
+     * @param type monster type/species
+     */
+    public void setType(String type) {
+        this.type = type;
+    }
 
-    public int getDefense() { return defense; }
-    public void setDefense(int defense) { this.defense = defense; }
+    /**
+     * Returns the monster level.
+     *
+     * @return level
+     */
+    public int getLevel() {
+        return level;
+    }
 
-    public SpecialPower getSpecialPower() { return specialPower; }
-    public void setSpecialPower(SpecialPower specialPower) { this.specialPower = specialPower; }
+    /**
+     * Sets the monster level.
+     *
+     * @param level monster level
+     */
+    public void setLevel(int level) {
+        this.level = level;
+    }
+
+    /**
+     * Returns the monster health.
+     *
+     * @return health
+     */
+    public int getHealth() {
+        return health;
+    }
+
+    /**
+     * Sets the monster health.
+     *
+     * @param health monster health
+     */
+    public void setHealth(int health) {
+        this.health = health;
+    }
+
+    /**
+     * Returns the monster attack stat.
+     *
+     * @return attack
+     */
+    public int getAttack() {
+        return attack;
+    }
+
+    /**
+     * Sets the monster attack stat.
+     *
+     * @param attack monster attack stat
+     */
+    public void setAttack(int attack) {
+        this.attack = attack;
+    }
+
+    /**
+     * Returns the monster defense stat.
+     *
+     * @return defense
+     */
+    public int getDefense() {
+        return defense;
+    }
+
+    /**
+     * Sets the monster defense stat.
+     *
+     * @param defense monster defense stat
+     */
+    public void setDefense(int defense) {
+        this.defense = defense;
+    }
+
+    /**
+     * Returns the monster special power.
+     *
+     * @return special power
+     */
+    public SpecialPower getSpecialPower() {
+        return specialPower;
+    }
+
+    /**
+     * Sets the monster special power.
+     *
+     * @param specialPower special power
+     */
+    public void setSpecialPower(SpecialPower specialPower) {
+        this.specialPower = specialPower;
+    }
 }
